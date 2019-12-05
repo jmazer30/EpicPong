@@ -42,14 +42,14 @@ class GameScene: SKScene
         aiPaddle.physicsBody?.isDynamic = false
         // create an action that will follow the ball
        run (SKAction.repeatForever (
-            SKAction.sequence([SKAction.run (followBall), SKAction.wait(forDuration: 0.2)])
+            SKAction.sequence([SKAction.run (followBall), SKAction.wait(forDuration: 0.25)])
         ))
     }
     
     func followBall()
     {
-        let move = SKAction.moveTo(x: ball.position.x, duration: 0.2)
-        let move2 = SKAction.moveTo(y: ball.position.y, duration: 0.2)
+        let move = SKAction.moveTo(x: ball.position.x, duration: 0.25)
+        let move2 = SKAction.moveTo(y: ball.position.y, duration: 0.25)
         aiPaddle.run(move)
         aiPaddle.run(move2)
     }
