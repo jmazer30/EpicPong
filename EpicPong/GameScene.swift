@@ -82,7 +82,7 @@ class GameScene: SKScene
         let location = touches.first!.location(in: self)
         if isFingerOnPaddle == true
         {
-            paddle.position.x = location.x
+            paddle.position = location
         }
     }
     
