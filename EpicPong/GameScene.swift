@@ -49,9 +49,9 @@ class GameScene: SKScene
     func followBall()
     {
         let move = SKAction.moveTo(x: ball.position.x, duration: 0.25)
-        let move2 = SKAction.moveTo(y: ball.position.y, duration: 0.25)
+       // let move2 = SKAction.moveTo(y: ball.position.y, duration: 0.25)
         aiPaddle.run(move)
-        aiPaddle.run(move2)
+       // aiPaddle.run(move2)
     }
     
     func makeNewBall(location: CGPoint)
