@@ -48,10 +48,15 @@ class GameScene: SKScene
     
     func followBall()
     {
+        let location2 = aiPaddle.position
+        //if location2.y > frame.height / 2 + 25
+        //{
         let move = SKAction.moveTo(x: ball.position.x, duration: 0.25)
         let move2 = SKAction.moveTo(y: ball.position.y, duration: 0.25)
         aiPaddle.run(move)
         aiPaddle.run(move2)
+        //}
+        
     }
     
     func makeNewBall(location: CGPoint)
@@ -82,7 +87,7 @@ class GameScene: SKScene
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         let location = touches.first!.location(in: self)
-        if isFingerOnPaddle == true && location.y < frame.height / 2 - 5
+        if isFingerOnPaddle == true && location.y < frame.height / 2 - 25
         {
             paddle.position = location
         }
